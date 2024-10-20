@@ -47,34 +47,30 @@ function Profile() {
   }
 
   return (
-    <main className='bg-[url("/img-bg.svg")] w-full h-screen flex justify-center items-center'>
-      <section className='w-fit px-8 sm:px-16 py-6 sm:py-12 bg-white rounded-2xl flex flex-col items-center gap-5 sm:gap-10'>
+    <main className='px-5 bg-[url("/img-bg.svg")] w-full h-screen flex justify-center items-center'>
+      <section className='px-8 sm:px-16 py-6 sm:py-12 bg-white rounded-2xl flex flex-col items-center gap-5 sm:gap-10'>
         {loading ? (
-          <>
-            <div className="animate-spin rounded-full h-16 w-16 border-t-2 border-b-2 border-gray-900"></div>
-            {/* <h2 className='text-3xl font-bold'>Tu perfil</h2> */}
-          </>
+          <div className="animate-spin rounded-full h-16 w-16 border-t-2 border-b-2 border-gray-900" />
         ) : (
           <>
             <h2 className='text-3xl font-bold'>Tu perfil</h2>
             {userDatil ? (
-              <div className='flex flex-col items-center gap-3'>
+              <div className='w-full flex flex-col items-center gap-3'>
                 {userDatil.photo ? (
-                  <img src={userDatil.photo} alt="imagen de perfil" className='w-[110px] object-cover rounded-full' />
+                  <img src={userDatil.photo} alt="imagen de perfil" className='w-20 sm:w-[110px] object-cover rounded-full' />
                 ) : null}
-                <div className='flex flex-col gap-1'>
-
-                  <h2 className='text-2xl font-bold'>{userDatil.firstName}</h2>
-                  <h2 className='flex gap-2 text-xl'>
+                <div className='w-full flex flex-col gap-1'>
+                  <h2 className='text-xl sm:text-2xl font-bold'>{userDatil.firstName}</h2>
+                  <h2 className='flex flex-wrap gap-2 text-base min-[400px]:text-lg sm:text-xl'>
                     Correo:
                     <span>{userDatil.email}</span>
                   </h2>
-                  <h2 className='flex gap-2 text-xl'>
+                  <h2 className='flex gap-2 text-lg sm:text-xl'>
                     Nombre:
                     <span>{userDatil.firstName}</span>
                   </h2>
                   {userDatil.lastName ? (
-                    <h2 className='flex gap-2 text-xl'>
+                    <h2 className='flex gap-2 text-lg sm:text-xl'>
                       Apellido:
                       <span>{userDatil.lastName}</span>
                     </h2>

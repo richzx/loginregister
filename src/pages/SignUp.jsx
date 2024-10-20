@@ -55,7 +55,7 @@ function SignUp() {
         <h2 className='text-2xl font-medium'>Registrarme</h2>
         <SignInWithGoogle />
         <span>O</span>
-        <form method="post" className='flex flex-col gap-3'>
+        <form method="post" className='w-[200px] min-[400px]:w-[250px] min-[500px]:w-[300px] flex flex-col gap-3'>
           <div className='w-full flex flex-col items-center gap-1'>
             <div className='w-full flex flex-col sm:flex-row gap-2 sm:max-w-[400px] sm:justify-between'>
               <div className='flex flex-col'>
@@ -67,7 +67,7 @@ function SignUp() {
                 <input className='w-full py-2 px-4 border border-[#6666664f] rounded-lg focus:ring-2 ring-gray-600 outline-none' type="text" name="lname" id="lastname" onChange={(e) => setLname(e.target.value)} />
               </div>
             </div>
-            <div className='w-[300px] sm:w-full flex flex-col'>
+            <div className='w-full flex flex-col'>
               <label htmlFor="email" className='text-base text-[#666]'>Correo</label>
               <input className='w-full sm:max-w-[400px] py-2 px-4 border border-[#6666664f] rounded-lg focus:ring-2 ring-gray-600 outline-none' type="email" name="email" id="email" onChange={(e) => setEmail(e.target.value)} />
             </div>
